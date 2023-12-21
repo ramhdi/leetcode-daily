@@ -28,7 +28,8 @@ class Solution {
                     before->next = toSwap2;
                 }
             }
-            printList(head);
+            // printList(head);
+
             if (i != 0) {
                 before = before->next;
             }

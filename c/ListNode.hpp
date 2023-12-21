@@ -2,8 +2,7 @@
 #include <iostream>
 using namespace std;
 
-struct ListNode
-{
+struct ListNode {
     int val;
     ListNode *next;
     ListNode() : val(0), next(nullptr) {}
@@ -11,14 +10,10 @@ struct ListNode
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-void printList(ListNode *head)
-{
-    if (head == nullptr)
-    {
+void printList(ListNode *head) {
+    if (head == nullptr) {
         cout << endl;
-    }
-    else
-    {
+    } else {
         cout << head->val << ",";
         printList(head->next);
     }
