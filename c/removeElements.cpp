@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/swap-nodes-in-pairs/
+// https://leetcode.com/problems/remove-linked-list-elements/
 
 #include <iostream>
 
