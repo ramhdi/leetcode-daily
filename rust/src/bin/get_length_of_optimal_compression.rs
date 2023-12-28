@@ -2,6 +2,7 @@
 
 impl Solution {
     pub fn get_length_of_optimal_compression(s: String, k: i32) -> i32 {
+        let s: Vec<char> = s.chars().collect();
         let n: usize = s.len();
         let mut dp: Vec<Vec<i32>> = vec![vec![9999; 110]; 110];
         dp[0][0] = 0;
@@ -11,7 +12,7 @@ impl Solution {
                 let mut cnt: usize = 0;
                 let mut del: usize = 0;
                 for l in (1..=i).rev() {
-                    if s.chars().nth(l - 1).unwrap() == s.chars().nth(i - 1).unwrap() {
+                    if s[l - 1] == s[i - 1] {
                         cnt += 1;
                     } else {
                         del += 1;
