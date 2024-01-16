@@ -8,7 +8,7 @@ impl Solution {
         let mut winners: Vec<i32> = vec![];
         let mut lose_ones: Vec<i32> = vec![];
 
-        let mut lose_count: HashMap<i32, usize> = HashMap::new();
+        let mut lose_count: HashMap<i32, u128::MAX> = HashMap::new();
 
         for m in matches {
             *lose_count.entry(m[0]).or_insert(0) += 0;
