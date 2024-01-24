@@ -1,17 +1,7 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+mod list_node;
+use crate::list_node::ListNode;
 
 impl Solution {
     pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
@@ -42,18 +32,6 @@ pub struct Solution {}
 fn main() {
     println!(
         "{:?}",
-        Solution::delete_duplicates(Some(Box::new(ListNode {
-            next: Some(Box::new(ListNode {
-                next: Some(Box::new(ListNode {
-                    next: Some(Box::new(ListNode {
-                        next: Some(Box::new(ListNode { next: None, val: 3 })),
-                        val: 3
-                    })),
-                    val: 2
-                })),
-                val: 1
-            })),
-            val: 1
-        })))
-    );
+        Solution::delete_duplicates(ListNode::from_array(&[1, 1, 2, 3, 3]))
+    ); // [1,2,3]
 }
