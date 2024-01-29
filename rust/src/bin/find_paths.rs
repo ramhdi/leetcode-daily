@@ -120,4 +120,5 @@ fn main() {
     println!("{:?}", Solution::find_paths(2, 2, 2, 0, 0)); // 6
     println!("{:?}", Solution::find_paths(1, 3, 3, 0, 1)); // 12
     println!("{:?}", Solution::find_paths(8, 7, 16, 1, 5)); // 102984580
+    println!("{:?}", Solution::find_paths(50, 50, 50, 25, 25)); // 276775132
 }
