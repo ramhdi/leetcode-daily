@@ -1,5 +1,5 @@
-// https://leetcode.com/problems/first-unique-character-in-a-string/
-// 2024/02/05
+// https://leetcode.com/problems/sort-characters-by-frequency/
+// 2024/02/07
 
 impl Solution {
     pub fn frequency_sort(s: String) -> String {
