@@ -1,4 +1,4 @@
-// Maximum Odd Binary Number
+// https://leetcode.com/problems/maximum-odd-binary-number/
 // 2024/03/01
 
 impl Solution {
