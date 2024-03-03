@@ -19,24 +19,20 @@ class Solution {
         }
 
         int k = 0;
-        ListNode *tail = head;
-        while (tail->next != nullptr) {
-            tail = tail->next;
+        ListNode *curr = head;
+        ListNode *toUpdate = head;
+        while (curr->next != nullptr) {
+            curr = curr->next;
+            if (k >= n) {
+                toUpdate = toUpdate->next;
+            }
             k++;
         }
 
         if (k == n - 1) {
             return head->next;
         }
-        // printList(tail);
 
-        int j = 0;
-        ListNode *toUpdate = head;
-        while (j < k - n) {
-            toUpdate = toUpdate->next;
-            j++;
-        }
-        // printList(toUpdate);
         toUpdate->next = toUpdate->next->next;
         return head;
     }
