@@ -1,5 +1,5 @@
-// https://leetcode.com/problems/length-of-last-word/
-// 2024/04/01
+// https://leetcode.com/problems/isomorphic-strings/
+// 2024/04/02
 
 impl Solution {
     pub fn is_isomorphic(s: String, t: String) -> bool {
