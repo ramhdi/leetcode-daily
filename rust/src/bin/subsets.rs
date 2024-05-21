@@ -21,13 +21,6 @@ impl Solution {
     }
 }
 
-// Editorial solution, most optimized
-// impl Solution {
-//     pub fn subset_xor_sum(nums: Vec<i32>) -> i32 {
-//         nums.iter().fold(0, |acc, &e| acc | e) << (nums.len() as i32 - 1)
-//     }
-// }
-
 pub struct Solution {}
 
 fn main() {
