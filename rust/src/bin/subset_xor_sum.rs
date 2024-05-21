@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/sum-of-all-subset-xor-totals/
-// 2024/05/17
+// 2024/05/20
 
 impl Solution {
     pub fn subset_xor_sum(nums: Vec<i32>) -> i32 {
