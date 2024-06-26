@@ -41,29 +41,31 @@ pub struct Solution {}
 fn main() {
     println!(
         "{:?}",
-        Solution::pseudo_palindromic_paths(TreeNode::from_array(
-            &[Some(2), Some(3), Some(1), Some(3), Some(1), None, Some(1)],
-            0,
-        ))
+        Solution::pseudo_palindromic_paths(TreeNode::from_array(&[
+            Some(2),
+            Some(3),
+            Some(1),
+            Some(3),
+            Some(1),
+            None,
+            Some(1)
+        ],))
     ); // 2
 
     println!(
         "{:?}",
-        Solution::pseudo_palindromic_paths(TreeNode::from_array(
-            &[
-                Some(2),
-                Some(1),
-                Some(1),
-                Some(1),
-                Some(3),
-                None,
-                None,
-                None,
-                None,
-                None,
-                Some(1),
-            ],
-            0,
-        ))
+        Solution::pseudo_palindromic_paths(TreeNode::from_array(&[
+            Some(2),
+            Some(1),
+            Some(1),
+            Some(1),
+            Some(3),
+            None,
+            None,
+            None,
+            None,
+            None,
+            Some(1),
+        ],))
     ); // 1
 }

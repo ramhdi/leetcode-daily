@@ -29,33 +29,31 @@ pub struct Solution {}
 fn main() {
     println!(
         "{:?}",
-        TreeNode::to_array(Solution::bst_to_gst(TreeNode::from_array(
-            &[
-                Some(4),
-                Some(1),
-                Some(6),
-                Some(0),
-                Some(2),
-                Some(5),
-                Some(7),
-                None,
-                None,
-                None,
-                Some(3),
-                None,
-                None,
-                None,
-                Some(8)
-            ],
-            0
-        )))
+        TreeNode::to_array(Solution::bst_to_gst(TreeNode::from_array(&[
+            Some(4),
+            Some(1),
+            Some(6),
+            Some(0),
+            Some(2),
+            Some(5),
+            Some(7),
+            None,
+            None,
+            None,
+            Some(3),
+            None,
+            None,
+            None,
+            Some(8)
+        ],)))
     ); // [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
 
     println!(
         "{:?}",
-        TreeNode::to_array(Solution::bst_to_gst(TreeNode::from_array(
-            &[Some(0), None, Some(1),],
-            0
-        )))
+        TreeNode::to_array(Solution::bst_to_gst(TreeNode::from_array(&[
+            Some(0),
+            None,
+            Some(1),
+        ],)))
     ); // [1,null,1]
 }

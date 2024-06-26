@@ -21,19 +21,18 @@ impl TreeNode {
         }
     }
 
-    pub fn from_array(arr: &[Option<i32>], index: usize) -> Option<Rc<RefCell<TreeNode>>> {
-        if index >= arr.len() || arr[index].is_none() {
-            return None;
+    pub fn from_array(arr: &[Option<i32>]) -> Option<Rc<RefCell<TreeNode>>> {
+        fn helper(arr: &[Option<i32>], index: usize) -> Option<Rc<RefCell<TreeNode>>> {
+            if index >= arr.len() || arr[index].is_none() {
+                return None;
+            }
+
+            let root = Rc::new(RefCell::new(TreeNode::new(arr[index]?)));
+            root.borrow_mut().left = helper(arr, 2 * index + 1);
+            root.borrow_mut().right = helper(arr, 2 * index + 2);
+            Some(root)
         }
-
-        let root = Rc::new(RefCell::new(TreeNode::new(arr[index].unwrap())));
-        let left_child = TreeNode::from_array(arr, 2 * index + 1);
-        let right_child = TreeNode::from_array(arr, 2 * index + 2);
-
-        root.borrow_mut().left = left_child;
-        root.borrow_mut().right = right_child;
-
-        return Some(root);
+        helper(arr, 0)
     }
 
     pub fn to_array(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Option<i32>> {

@@ -45,25 +45,22 @@ pub struct Solution {}
 fn main() {
     println!(
         "{:?}",
-        Solution::find_bottom_left_value(TreeNode::from_array(&[Some(2), Some(1), Some(3)], 0))
+        Solution::find_bottom_left_value(TreeNode::from_array(&[Some(2), Some(1), Some(3)],))
     ); // 1
 
     println!(
         "{:?}",
-        Solution::find_bottom_left_value(TreeNode::from_array(
-            &[
-                Some(1),
-                Some(2),
-                Some(3),
-                Some(4),
-                None,
-                Some(5),
-                Some(6),
-                None,
-                None,
-                Some(7)
-            ],
-            0
-        ))
+        Solution::find_bottom_left_value(TreeNode::from_array(&[
+            Some(1),
+            Some(2),
+            Some(3),
+            Some(4),
+            None,
+            Some(5),
+            Some(6),
+            None,
+            None,
+            Some(7)
+        ],))
     ); // 7
 }

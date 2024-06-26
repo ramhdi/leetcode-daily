@@ -35,19 +35,22 @@ pub struct Solution {}
 fn main() {
     println!(
         "{:?}",
-        Solution::diameter_of_binary_tree(TreeNode::from_array(
-            &[Some(1), Some(2), Some(3), Some(4), Some(5)],
-            0
-        ))
+        Solution::diameter_of_binary_tree(TreeNode::from_array(&[
+            Some(1),
+            Some(2),
+            Some(3),
+            Some(4),
+            Some(5)
+        ],))
     ); // 3
 
     println!(
         "{:?}",
-        Solution::diameter_of_binary_tree(TreeNode::from_array(&[Some(1), Some(2)], 0))
+        Solution::diameter_of_binary_tree(TreeNode::from_array(&[Some(1), Some(2)],))
     ); // 1
 
     println!(
         "{:?}",
-        Solution::diameter_of_binary_tree(TreeNode::from_array(&[Some(1)], 0))
+        Solution::diameter_of_binary_tree(TreeNode::from_array(&[Some(1)],))
     ); // 0
 }

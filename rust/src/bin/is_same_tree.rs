@@ -33,24 +33,24 @@ fn main() {
     println!(
         "{:?}",
         Solution::is_same_tree(
-            TreeNode::from_array(&[Some(1), Some(2), Some(3)], 0),
-            TreeNode::from_array(&[Some(1), Some(2), Some(3)], 0)
+            TreeNode::from_array(&[Some(1), Some(2), Some(3)],),
+            TreeNode::from_array(&[Some(1), Some(2), Some(3)],)
         )
     ); // true
 
     println!(
         "{:?}",
         Solution::is_same_tree(
-            TreeNode::from_array(&[Some(1), Some(2)], 0),
-            TreeNode::from_array(&[Some(1), None, Some(2)], 0)
+            TreeNode::from_array(&[Some(1), Some(2)],),
+            TreeNode::from_array(&[Some(1), None, Some(2)],)
         )
     ); // false
 
     println!(
         "{:?}",
         Solution::is_same_tree(
-            TreeNode::from_array(&[Some(1), Some(2), Some(1)], 0),
-            TreeNode::from_array(&[Some(1), Some(1), Some(2)], 0)
+            TreeNode::from_array(&[Some(1), Some(2), Some(1)],),
+            TreeNode::from_array(&[Some(1), Some(1), Some(2)],)
         )
     ); // false
 }

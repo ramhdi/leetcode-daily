@@ -76,39 +76,44 @@ pub struct Solution {}
 fn main() {
     println!(
         "{:?}",
-        Solution::is_even_odd_tree(TreeNode::from_array(
-            &[
-                Some(1),
-                Some(10),
-                Some(4),
-                Some(3),
-                None,
-                Some(7),
-                Some(9),
-                Some(12),
-                Some(8),
-                Some(6),
-                None,
-                None,
-                Some(2)
-            ],
-            0
-        ))
+        Solution::is_even_odd_tree(TreeNode::from_array(&[
+            Some(1),
+            Some(10),
+            Some(4),
+            Some(3),
+            None,
+            Some(7),
+            Some(9),
+            Some(12),
+            Some(8),
+            Some(6),
+            None,
+            None,
+            Some(2)
+        ],))
     ); // true
 
     println!(
         "{:?}",
-        Solution::is_even_odd_tree(TreeNode::from_array(
-            &[Some(5), Some(4), Some(2), Some(3), Some(3), Some(7)],
-            0
-        ))
+        Solution::is_even_odd_tree(TreeNode::from_array(&[
+            Some(5),
+            Some(4),
+            Some(2),
+            Some(3),
+            Some(3),
+            Some(7)
+        ],))
     ); // false
 
     println!(
         "{:?}",
-        Solution::is_even_odd_tree(TreeNode::from_array(
-            &[Some(5), Some(9), Some(1), Some(3), Some(5), Some(7)],
-            0
-        ))
+        Solution::is_even_odd_tree(TreeNode::from_array(&[
+            Some(5),
+            Some(9),
+            Some(1),
+            Some(3),
+            Some(5),
+            Some(7)
+        ],))
     ); // false
 }
