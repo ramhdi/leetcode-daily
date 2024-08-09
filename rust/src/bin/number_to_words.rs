@@ -34,8 +34,6 @@ impl Solution {
             "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety",
         ];
 
-        let mut exponents = ["Thousand", "Million", "Billion"];
-
         let mut result: String = String::new();
 
         let part1 = num / 1_000_000_000;
